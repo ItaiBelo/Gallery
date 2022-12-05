@@ -38,7 +38,7 @@ function renderModal(project) {
         ` <h2>${project.name}</h2>
         <p class="item-intro text-muted">${project.desc}.</p>
         <img class="img-fluid d-block mx-auto" src="img/portfolio/0${project.id}-full.jpg" alt="">
-        <p>${project.desc}</p>
+        <p>very long description</p>
         <ul class="list-inline">
           <li>Published at: ${project.publishedAt}</li>
           <br>
