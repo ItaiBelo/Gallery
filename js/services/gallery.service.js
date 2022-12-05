@@ -3,9 +3,9 @@ var gProjects = []
 
 _createProjects()
 function _createProjects() {
-    gProjects.push(_createProject(1, 'Pacman', 'title', 'We all know that game right?', 'https://itaibelo.github.io/Pacman/', 1669030088, 'labels'))
-    gProjects.push(_createProject(2, 'mine sweeper', 'title', 'Classy one, try no to explode ', 'https://minesweeper.online/', 1669202888, 'labels'))
-    gProjects.push(_createProject(3, 'ball board', 'title', 'Lets see if you can catch them all', 'https://itaibelo.github.io/Ball-Board/', 1668943688, 'labels'))
+    gProjects.push(_createProject(1, 'Pacman', 'title', 'We all know that game right?', 'https://itaibelo.github.io/Pacman/', 1669030088, 'Matrixes,Mouse and keyboard events'))
+    gProjects.push(_createProject(2, 'mine sweeper', 'title', 'Classy one, try no to explode ', 'https://minesweeper.online/', 1669202888, 'Matrixes,Mouse events'))
+    gProjects.push(_createProject(3, 'ball board', 'title', 'Lets see if you can catch them all', 'https://itaibelo.github.io/Ball-Board/', 1668943688, 'Matrixes,Mouse and keyboard events'))
 }
 
 function _createProject(id, name, title, desc, url, publishedAt, labels) {

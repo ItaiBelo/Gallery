@@ -42,7 +42,7 @@ function renderModal(project) {
         <ul class="list-inline">
           <li>Published at: ${project.publishedAt}</li>
           <br>
-          <li>Category:  ${project.labels}</li>
+          <li>Labels:  ${project.labels}</li>
           <br>
           <li><button type="button" class="btn btn-success" onclick="openUrl('${project.url}')">try it out</button></li>
         </ul>
