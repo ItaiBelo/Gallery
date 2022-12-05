@@ -1,7 +1,6 @@
 
 'use strict'
 renderProject()
-renderModals()
 
 function renderProject() {
     var projects = getProjects()
@@ -10,10 +9,10 @@ function renderProject() {
     <div class="row">`
 
     // console.log(strHtmls)
-    var temp = projects.map(proj => {
+    var projRenderStrs = projects.map(proj => {
         return `
         <div class="col-md-4 col-sm-6 portfolio-item">
-         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal${proj.id}">
+         <a class="portfolio-link" data-toggle="modal" onclick="onOpenModal(${proj.id})" href="#portfolioModal1">
       <div class="portfolio-hover">
       <div class="portfolio-hover-content">
       <i class="fa fa-plus fa-3x"></i>
@@ -27,36 +26,41 @@ function renderProject() {
    </div> </div> `
     })
 
-    var temp1 = temp.join('')
-    strHtmls += temp1
+    strHtmls += projRenderStrs.join('')
     strHtmls += `</div>`
 
     var elContainer = document.getElementById('portfolio')
     elContainer.innerHTML = strHtmls
 }
 
-
-function renderModals() {
-    const project = getProjects()
-    var strHtmls = project.map(project => {
-        return ` <h2>${project.name}</h2>
+function renderModal(project) {
+    var strHtml =
+        ` <h2>${project.name}</h2>
         <p class="item-intro text-muted">${project.desc}.</p>
         <img class="img-fluid d-block mx-auto" src="img/portfolio/0${project.id}-full.jpg" alt="">
         <p>${project.desc}</p>
         <ul class="list-inline">
-          <li>Date: ${project.publishedAt}</li>
-          <li>Client: ${project.url}</li>
+          <li>Published at: ${project.publishedAt}</li>
+          <br>
           <li>Category:  ${project.labels}</li>
+          <br>
+          <li><button type="button" class="btn btn-success" onclick="openUrl('${project.url}')">try it out</button></li>
         </ul>
         <button class="btn btn-primary" data-dismiss="modal" type="button">
         <i class="fa fa-times"></i>
         Close Project</button>`
-    })
 
     var elModal = document.getElementById('modal')
-    elModal.innerHTML = strHtmls.join('')
+    // console.log(elModal)
+    elModal.innerHTML = strHtml
+    // console.log(elModal)
 }
 
-function onOpenModal(proj) {
+function onOpenModal(projId) {
+    var proj = getProjById(projId)
+    renderModal(proj)
+}
 
+function onSendEmail() {
+    sendEmail()
 }

@@ -28,7 +28,7 @@
 
 <body id="page-top">
   <div class="offcanvas-btn" onClick="openCanvas()">
-    <i class="fa fa-comment" aria-hidden="true"></i>
+    <i class="fa fa-comment"></i>
   </div>
   <aside class="offcanvas-aside">
 
@@ -37,41 +37,42 @@
 
       <p class="h4 mb-4">Contact me</p>
       <!-- Name -->
-      <input type="text" class="form-control mb-4" placeholder="Name">
+      <input type="text" class="form-control mb-4" id="user-name" placeholder="Name">
 
       <!-- Email -->
-      <input type="email" class="form-control mb-4" placeholder="E-mail">
+      <input type="email" class="form-control mb-4" id="email-address" placeholder="E-mail">
 
       <!-- Subject -->
       <label>Subject</label>
-      <select class="browser-default custom-select mb-4">
+      <select class="browser-default custom-select mb-4" id="subject">
         <option disabled>Choose option</option>
         <option selected>Feedback</option>
         <option>Report a bug</option>
-        <option>Cooperation</option>
+        <option>Collaboration</option>
         <option>Other</option>
       </select>
 
       <!-- Message -->
       <div class="form-group">
-        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
-          placeholder="Message"></textarea>
+        <textarea class="form-control rounded-0" id="email-text" rows="3" placeholder="Message"></textarea>
       </div>
 
       <!-- Send button -->
-      <button class="btn btn-info btn-block" type="submit">Send</button>
+      <button class="btn btn-info btn-block " type="button" onclick="onSendEmail()">
+        <a id="send-email" target="_blank">Send <i class="fa fa-handshake-o" aria-hidden="true"></i></a>
+      </button>
 
     </form>
     <div class="text-center">
       <ul class="list-unstyled mb-0">
 
         <li><i></i>
-          <p class="fa fa-envelope"></p>
+          <p class="fa fa-phone"></p>
           <p>+972 52-451-7190</p>
         </li>
 
         <li><i></i>
-          <p class="fa fa-phone"></p>
+          <p class="fa fa-envelope"></p>
           <p>Itaibe2904@gmail.com</p>
         </li>
       </ul>
@@ -122,40 +123,40 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Specialities</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3 class="section-heading">Specialities</h2>
+            <h3 class="section-subheading text-muted">I am a fullstack developer who builds elegant,fast, and scalable
+              web
+              applications</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            <a></a>
+            <i class="fa fa-circle fa-stack-2x text-primary "></i>
+            <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <h4 class="service-heading">Design</h4>
+          <p class="text-muted">I create beautiful, modern designs optimized for multiple color modes (light and dark
+            themes)</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <h4 class="service-heading">Development</h4>
+          <p class="text-muted">I develop responsive, scalable and fast applications using the best standards and coding
+            practices</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore harum ex
-            magni, dicta impedit.</p>
+          <h4 class="service-heading">Launch & Maintenance</h4>
+          <p class="text-muted">Once the application is ready, I will help you launch it and teach you how to update and
+            maintain it</p>
         </div>
       </div>
     </div>
@@ -197,20 +198,20 @@
         <div class="team-member">
           <img class="mx-auto rounded-circle" src="img/team/itai.jpeg" alt="">
           <h4>Itai Belotserkovski</h4>
-          <p class="text-muted">Ahla Gever</p>
+          <p class="text-muted">Fullstack Developer</p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/?lang=en">
                 <i class="fa fa-twitter"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
+              <a href="https://www.instagram.com/itai.belo/?hl=en">
+                <i class="fa fa-instagram"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://www.linkedin.com/">
                 <i class="fa fa-linkedin"></i>
               </a>
             </li>
@@ -240,15 +241,14 @@
         <div class="col-md-4 flex-align-center">
           <ul class="list-inline social-buttons flex-align-center">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://twitter.com/?lang=en">
                 <i class="fa fa-twitter">
-                  <link rel="stylesheet" href="https://www.google.com/">
                 </i>
               </a>
             </li>
             <li class="list-inline-item flex-align-center">
-              <a href="#">
-                <i class="fa fa-facebook"></i>
+              <a href="https://www.linkedin.com/">
+                <i class="fa fa-instagram"></i>
               </a>
             </li>
             <li class="list-inline-item">
